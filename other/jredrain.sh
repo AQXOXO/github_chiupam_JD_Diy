@@ -324,12 +324,12 @@ function Env(t,e){"undefined"!=typeof process&&JSON.stringify(process.env).index
 EOF
 
 if [ ! -d "/ql" ];then
-  echo "$lrr" | sed -e "s/RRAID/$1/g" > /jd/scripts/lxk0301_live_redrain.js
+  echo "$lrr" | sed -e "s/RRAID/$1/g" > /jd/jbot/jk_script/jd_redrain.js
   echo "红包雨RRA替换成$1完成，准备执行脚本"
-  mtask /jd/scripts/lxk0301_live_redrain.js now
+  mtask /jd/jbot/jk_script/jd_redrain.js now
 else
-  echo "$lrr" | sed -e "s/RRAID/$1/g" > /ql/scripts/lxk0301_live_redrain.js
+  echo "$lrr" | sed -e "s/RRAID/$1/g" > /jd/jbot/jk_script/jd_redrain.js
   echo "红包雨RRA替换成$1完成，准备执行脚本"
-  task lxk0301_live_redrain.js now
+  task jd_redrain.js now
 fi
 
